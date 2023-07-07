@@ -1,0 +1,20 @@
+# 2. Remova todos os caracteres duplicados da string abaixo:
+# a. Input: "Hello, World!"
+# b. Output: "Helo, Wrd!"
+
+def remove_duplicates(string):
+    unique_chars = set()
+    result = []
+
+    for char in string:
+
+        if char not in unique_chars:
+            result.append(char)
+            unique_chars.add(char)
+    return "".join(result)
+
+
+input_string = "Hello, World!"
+
+output_string = remove_duplicates(input_string)
+print(output_string)
